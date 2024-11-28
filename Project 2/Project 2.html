@@ -7558,7 +7558,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">DeltaGammaHedging</span><span class="p">:</span>
@@ -7639,6 +7639,7 @@ a.anchor-link {
                     <span class="n">cash</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">N</span> <span class="o">*</span> <span class="n">price_g</span> <span class="o">-</span> <span class="n">target_stock_position</span> <span class="o">*</span> <span class="n">S</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
 
                     <span class="c1"># Calculate transaction costs</span>
+                    <span class="n">cash</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">N</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_cost_option</span>
                     <span class="n">cash</span> <span class="o">-=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">target_stock_position</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_cost_stock</span>
 
                     <span class="c1"># Update positions</span>
@@ -7746,6 +7747,7 @@ a.anchor-link {
                     <span class="n">cash</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">N</span> <span class="o">*</span> <span class="n">price_g</span> <span class="o">-</span> <span class="n">target_stock_position</span> <span class="o">*</span> <span class="n">S</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">-</span> <span class="n">target_option_h_position</span> <span class="o">*</span> <span class="n">price_h</span>
 
                     <span class="c1"># Calculate transaction costs</span>
+                    <span class="n">cash</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">N</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_cost_option</span>
                     <span class="n">cash</span> <span class="o">-=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">target_stock_position</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_cost_stock</span>
                     <span class="n">cash</span> <span class="o">-=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">target_option_h_position</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_cost_option</span>
 
